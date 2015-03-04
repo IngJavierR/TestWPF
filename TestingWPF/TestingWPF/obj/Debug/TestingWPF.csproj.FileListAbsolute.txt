@@ -1,0 +1,1 @@
+c:\users\ing.javier\documents\visual studio 2012\Projects\TestingWPF\TestingWPF\bin\Debug\TestingWPF.exe.config
