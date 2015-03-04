@@ -1,1 +1,14 @@
 c:\users\ing.javier\documents\visual studio 2012\Projects\TestingWPF\TestingWPF\bin\Debug\TestingWPF.exe.config
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\bin\Debug\TestingWPF.exe.config
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\bin\Debug\TestingWPF.exe
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\bin\Debug\TestingWPF.pdb
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\TestingWPF.csprojResolveAssemblyReference.cache
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\MainWindow.baml
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\App.g.cs
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\TestingWPF_MarkupCompile.cache
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\TestingWPF.g.resources
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\TestingWPF.Properties.Resources.resources
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\TestingWPF.csproj.GenerateResource.Cache
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\TestingWPF.exe
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\TestingWPF.pdb

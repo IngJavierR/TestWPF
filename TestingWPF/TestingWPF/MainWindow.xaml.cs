@@ -20,9 +20,30 @@ namespace TestingWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        int count = 1;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void buttonTest_Click_1(object sender, RoutedEventArgs e)
+        {
+            switch (count)
+            {
+                case 1:
+                    MessageBox.Show("Te amo");
+                    break;
+                case 2:
+                    MessageBox.Show("muchisimo");
+                    break;
+                case 3:
+                    MessageBox.Show("mi vida");
+                    break;
+                default:
+                    MessageBox.Show("muchismooooo!!!!");
+                    break;
+            }
+            count++;
         }
     }
 }
