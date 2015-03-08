@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Packaging;
 
 namespace TestingWPF
 {
@@ -24,6 +26,7 @@ namespace TestingWPF
         public MainWindow()
         {
             InitializeComponent();
+            buttonName.Text = "Press Me!";
         }
 
         private void buttonTest_Click_1(object sender, RoutedEventArgs e)
@@ -40,10 +43,27 @@ namespace TestingWPF
                     MessageBox.Show("mi vida");
                     break;
                 default:
-                    MessageBox.Show("muchismooooo!!!!");
+                    MessageBox.Show(obtieneTextoFormateado("muchisimo!!"));
                     break;
             }
             count++;
         }
+
+        public String obtieneTextoFormateado(String texto)
+        {
+            return texto.ToUpper();
+        }
+
+        private void buttonTest_Click_Consulta(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CommonHandlerButton(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Press Si, No");
+        }
+
+        
     }
 }

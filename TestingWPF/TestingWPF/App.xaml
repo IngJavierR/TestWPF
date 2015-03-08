@@ -3,6 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="textBoxStyle" TargetType="TextBox">
+            <Setter Property="Foreground" Value="Green"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="50"/>
+        </Style>
+        <Style x:Key="textBoxStyleBlack" BasedOn="{StaticResource textBoxStyle}" TargetType="TextBox">
+            <Setter Property="FontWeight" Value="Black"/>
+        </Style>
+        <Style TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Background" Value="Gray"></Setter>
+                </Trigger>
+            </Style.Triggers>
+            <Setter Property="Background" Value="LightBlue"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="200"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Value="Rojo">
+                    <Setter Property="Foreground" Value="Red"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Value="Azul">
+                    <Setter Property="Foreground" Value="Blue"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
     </Application.Resources>
 </Application>

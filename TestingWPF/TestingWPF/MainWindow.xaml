@@ -3,6 +3,31 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button Name="buttonTest" Click="buttonTest_Click_1" Height="50" Width="200" Content="Click Me!"></Button>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Top" Grid.Row="0">
+            <Image Source="Images/samsung.jpg" Height="30" Width="80"/>
+            <TextBlock x:Name="Nombre" Width="45">Nombre: </TextBlock>
+            <TextBox x:Name="NombreTxt" Style="{StaticResource textBoxStyle}"/>
+            <TextBlock x:Name="Apellido">Apellido</TextBlock>
+            <TextBox x:Name="ApellidoTxt" Style="{StaticResource textBoxStyleBlack}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="50" Width="200" Grid.Row="1">
+            <Button Name="buttonTest" Click="buttonTest_Click_1" Height="20" Width="80">
+                <Button.Content>
+                    <StackPanel>
+                        <TextBlock x:Name="buttonName"></TextBlock>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <Button Name="buttonConsulta" Click="buttonTest_Click_Consulta" Height="20" Width="80" Content="Open Word"></Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="80" Width="200" Button.Click="CommonHandlerButton" Grid.Row="2">
+            <Button x:Name="btn_si" Width="100" Height="30">Si</Button>
+            <Button x:Name="btn_no" Width="100" Height="30">No</Button>
+        </StackPanel>
     </Grid>
 </Window>
