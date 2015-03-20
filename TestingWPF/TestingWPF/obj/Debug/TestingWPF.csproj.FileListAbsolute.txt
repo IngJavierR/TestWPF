@@ -13,3 +13,9 @@ C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\TestingWPF
 C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\TestingWPF.exe
 C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\TestingWPF.pdb
 C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\App.baml
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\bin\Debug\Servicios.dll
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\bin\Debug\Servicios.pdb
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\TestingWPF_MarkupCompile.lref
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\Reportes\ReporteComun.baml
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\TestingWPF\obj\Debug\Reportes\ReporteComun.g.cs

@@ -31,5 +31,16 @@
                 </DataTrigger>
             </Style.Triggers>
         </Style>
+        
+        <DataTemplate x:Key="HeaderStyleMt">
+            <StackPanel Orientation="Vertical" Margin="-4.5,-5,-4.5,-5"  Width="1000" HorizontalAlignment="Center" >
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF9E003A" />
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <TextBlock Width="Auto" Margin="6,6,6,6" Text="{Binding}" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </DataTemplate>
     </Application.Resources>
 </Application>

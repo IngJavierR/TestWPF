@@ -1,0 +1,6 @@
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\Servicios\bin\Debug\Servicios.dll.config
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\Servicios\bin\Debug\Servicios.dll
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\Servicios\bin\Debug\Servicios.pdb
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\Servicios\obj\Debug\Servicios.dll
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\Servicios\obj\Debug\Servicios.pdb
+C:\Users\Ing.Javier\Documents\TestWPF\TestingWPF\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache

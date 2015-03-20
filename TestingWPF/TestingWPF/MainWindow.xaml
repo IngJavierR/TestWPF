@@ -1,12 +1,21 @@
 ﻿<Window x:Class="TestingWPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        xmlns:my="clr-namespace:TestingWPF.Resources"
+        Title="MainWindow" Height="700" Width="725">
+    <Window.Resources>
+        <my:ConvertStringToHour x:Key="formatter"/>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="110"></RowDefinition>
+            <RowDefinition Height="110"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Top" Grid.Row="0">
             <Image Source="Images/samsung.jpg" Height="30" Width="80"/>
@@ -25,9 +34,56 @@
             </Button>
             <Button Name="buttonConsulta" Click="buttonTest_Click_Consulta" Height="20" Width="80" Content="Open Word"></Button>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Height="80" Width="200" Button.Click="CommonHandlerButton" Grid.Row="2">
+        <StackPanel Orientation="Horizontal" Button.Click="CommonHandlerButton" Grid.Row="2">
             <Button x:Name="btn_si" Width="100" Height="30">Si</Button>
             <Button x:Name="btn_no" Width="100" Height="30">No</Button>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="3">
+            <Button Command="Cut" Height="20" Width="50" CommandTarget="{Binding ElementName=txtDocument}">Cut</Button>
+            <Button Command="Copy" Height="20" Width="50" CommandTarget="{Binding ElementName=txtDocument}">Copy</Button>
+            <Button Command="Paste" Height="20" Width="50" CommandTarget="{Binding ElementName=txtDocument}">Paste</Button>
+            <TextBox x:Name="txtDocument" Width="300"/>
+        </StackPanel>
+        <StackPanel x:Name="PersonStack" Orientation="Horizontal" Grid.Row="4">
+            <TextBlock >Name:</TextBlock>
+            <TextBox Text="{Binding Name}"/>
+            <TextBlock >Age:</TextBlock>
+            <TextBox Text="{Binding Age}"/>
+            <Button x:Name="birthdayButton">Birthday</Button>
+        </StackPanel>
+        <StackPanel x:Name="ComboBoxStack" Orientation="Horizontal" Grid.Row="5">
+            <ComboBox x:Name="comboBoxDeportes" SelectedValue="{Binding deporte_practico}" Height="30" Width="250"/>
+            <Button x:Name="btn_CreateExcel" Click="btn_CreateExcel_Click_1" Width="100" Content="Open XML"/>
+        </StackPanel>
+        <StackPanel Grid.Row="6" Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+                <Label Content="Nombre: " />
+                <TextBox Text="{Binding Nombre}"  Width="150" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label Content="Apellido 1: " />
+                <TextBox Text="{Binding Apellido1}"  Width="150" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label Content="Apellido 2: " />
+                <TextBox Text="{Binding Apellido2}" Width="150" />
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="7">
+            <GroupBox  Width="Auto" Height="110" Margin="0,10,0,0" BorderThickness="1,1,1,1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFFFFFFF" BorderBrush="#FFCCCCCC">
+                <DataGrid x:Name="tablaCustomer" ItemsSource="{Binding}" AutoGenerateColumns="False" IsReadOnly="True" 
+                          SelectionMode="Single" Margin="5" AlternationCount="2" FontFamily="Arial" FontSize="12" 
+                          GridLinesVisibility="None" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible" 
+                          Background="#FFFFFFFF" CanUserAddRows="False" CanUserDeleteRows="False" ScrollViewer.CanContentScroll="True" Height="90" Width="690" SelectionChanged="tablaCustomer_SelectedCellsChanged_1">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Width="80*" HeaderTemplate="{StaticResource HeaderStyleMt}" Header="PersonID" Binding="{Binding PersonID}"/>
+                        <DataGridTextColumn Width="80*" HeaderTemplate="{StaticResource HeaderStyleMt}" Header="LastName" Binding="{Binding LastName}"/>
+                        <DataGridTextColumn Width="80*" HeaderTemplate="{StaticResource HeaderStyleMt}" Header="FirstName" Binding="{Binding FirstName}"/>
+                        <DataGridTextColumn Width="80*" HeaderTemplate="{StaticResource HeaderStyleMt}" Header="DateHour" Binding="{Binding DateHour, StringFormat={}\{0:hh:mm tt\}, Converter={StaticResource formatter}}"/>
+                        <DataGridTextColumn Width="80*" HeaderTemplate="{StaticResource HeaderStyleMt}" Header="Fecha" Binding="{Binding Fecha}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </GroupBox>
         </StackPanel>
     </Grid>
 </Window>
